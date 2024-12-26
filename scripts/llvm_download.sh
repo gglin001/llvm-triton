@@ -19,7 +19,8 @@ git sparse-checkout add \
   '!/llvm/utils/gn' \
   '!/llvm/lib/Target' '/llvm/lib/Target/*.*' \
   '/llvm/lib/Target/RISCV' '/llvm/lib/Target/ARM' '/llvm/lib/Target/AArch64' \
-  '/llvm/lib/Target/AMDGPU' 'llvm/lib/Target/NVPTX' 'llvm/lib/Target/X86'
+  '/llvm/lib/Target/AMDGPU' 'llvm/lib/Target/NVPTX' 'llvm/lib/Target/X86' \
+  'llvm/lib/Target/SPIRV'
 
 git sparse-checkout list
 
