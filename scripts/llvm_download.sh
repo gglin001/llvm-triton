@@ -26,10 +26,12 @@ git sparse-checkout list
 
 ######
 
-LLVM_SHA="86b69c31642e98f8357df62c09d118ad1da4e16a"
+# LLVM_SHA="86b69c31642e98f8357df62c09d118ad1da4e16a"
+LLVM_SHA="1188b1ff7b956cb65d8ddda5f1e56c432f1a57c7"
 
 git fetch --depth 1 origin $LLVM_SHA
-git checkout -b sync $LLVM_SHA
+# git checkout -b sync $LLVM_SHA
+git checkout $LLVM_SHA
 
 popd
 
