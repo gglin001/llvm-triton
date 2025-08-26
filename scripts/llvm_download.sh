@@ -10,7 +10,7 @@ git remote add origin git@github.com:llvm/llvm-project.git
 ######
 
 git sparse-checkout set --no-cone \
-  /cmake /llvm /mlir \
+  /cmake /llvm /mlir /lld /libunwind \
   '!/llvm/test' '!/llvm/unittests' '!/llvm/docs' \
   '!/mlir/test' '!/mlir/unittests' '!/mlir/docs' \
   /.vscode '/*.*'
