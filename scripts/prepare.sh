@@ -5,6 +5,3 @@ pixi g i python clang clangxx clang-tools
 pixi g i mold
 # use clang + lld from conda on macos
 pixi g i lld
-
-# `libtriton.so` needs libz
-apt install libz-dev
