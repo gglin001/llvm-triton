@@ -6,5 +6,5 @@ pixi g i mold
 # use clang + lld from conda on macos
 pixi g i lld
 
-# TODO: find why `-lz` is used in libtriton.so
-# apt install libz-dev
+# `libtriton.so` needs libz
+apt install libz-dev
