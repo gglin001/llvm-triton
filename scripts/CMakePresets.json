@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 10,
   "configurePresets": [
     {
       "name": "osx",
@@ -32,6 +32,13 @@
         "LLVM_ENABLE_PROJECTS": "mlir;lld",
         "MLIR_INCLUDE_TESTS": false,
         "MLIR_ENABLE_BINDINGS_PYTHON": false
+      }
+    },
+    {
+      "name": "osx_lld",
+      "inherits": "osx",
+      "cacheVariables": {
+        "CMAKE_LINKER_TYPE": "LLD"
       }
     }
   ]

@@ -13,20 +13,16 @@ git sparse-checkout set --no-cone \
   /cmake /llvm /mlir /lld /libunwind \
   '!/llvm/test' '!/llvm/unittests' '!/llvm/docs' \
   '!/mlir/test' '!/mlir/unittests' '!/mlir/docs' \
-  /.vscode '/*.*'
+  '!/lld/test' \
+  '/third-party/siphash' \
+  /.vscode '/*.*' '!/.ci' '!/.github'
 
 git sparse-checkout add \
   '!/llvm/utils/gn' \
   '!/llvm/lib/Target' '/llvm/lib/Target/*.*' \
   '/llvm/lib/Target/RISCV' '/llvm/lib/Target/ARM' '/llvm/lib/Target/AArch64' \
-  '/llvm/lib/Target/AMDGPU' 'llvm/lib/Target/NVPTX' 'llvm/lib/Target/X86' \
-  'llvm/lib/Target/SPIRV'
-
-# ninja: error: 'llvm-triton/llvm-project/llvm/lib/Target/PowerPC/PPC.td',
-# needed by 'include/llvm/TargetParser/PPCGenTargetFeatures.inc', missing and no known rule to make it
-git sparse-checkout add \
-  'llvm/lib/Target/PowerPC' \
-  'third-party/siphash'
+  '/llvm/lib/Target/AMDGPU' '/llvm/lib/Target/NVPTX' '/llvm/lib/Target/X86' \
+  '/llvm/lib/Target/SPIRV' '/llvm/lib/Target/PowerPC'
 
 git sparse-checkout list
 
@@ -41,12 +37,5 @@ git fetch --depth 1 origin $LLVM_SHA
 git checkout $LLVM_SHA
 
 popd
-
-###############################################################################
-
-# old log
-
-# du -hs llvm-project
-# 439M    llvm-project
 
 ###############################################################################
