@@ -4,6 +4,7 @@
     {
       "name": "osx",
       "generator": "Ninja",
+      "description": "linux with mold",
       "binaryDir": "${sourceDir}/../build",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
@@ -38,7 +39,9 @@
     {
       "name": "osx_lld",
       "inherits": "osx",
+      "description": "macos with lld",
       "cacheVariables": {
+        "CMAKE_SYSROOT": "",
         "CMAKE_LINKER_TYPE": "LLD"
       }
     }
