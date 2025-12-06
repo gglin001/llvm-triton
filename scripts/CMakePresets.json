@@ -44,6 +44,15 @@
         "CMAKE_SYSROOT": "",
         "CMAKE_LINKER_TYPE": "LLD"
       }
+    },
+    {
+      "name": "osx_pixi",
+      "inherits": "osx",
+      "description": "linux with mold and pixi",
+      "cacheVariables": {
+        "CMAKE_SYSROOT": "$env{CONDA_BUILD_SYSROOT}",
+        "CMAKE_PREFIX_PATH": "$env{CMAKE_PREFIX_PATH}"
+      }
     }
   ]
 }
