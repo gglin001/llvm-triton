@@ -32,7 +32,8 @@ git sparse-checkout list
 
 ######
 
-LLVM_SHA="27d654c4c4e6eb7c19e46af20500200e793da7c7"
+# https://github.com/triton-lang/triton/tree/release/3.7.x
+LLVM_SHA="ac5dc54d509169d387fcfd495d71853d81c46484"
 
 git fetch --depth 1 origin $LLVM_SHA
 # git checkout -b sync $LLVM_SHA
